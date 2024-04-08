@@ -1,0 +1,14 @@
+$breakpoints: (
+  xxs: (
+    0,
+    md
+  ),
+  md: (
+    1000px,
+    infinity
+  ),
+  infinity: (
+    99999999px,
+    none
+  ),
+);

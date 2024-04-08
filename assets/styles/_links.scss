@@ -1,0 +1,13 @@
+@use 'colors';
+
+a {
+    border-bottom: 2px solid rgb(0 102 255 / 10%);
+    color: colors.$ultramarine-blue;
+    font-family: ALSHauss, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.09px;
+
+    &:hover {
+        border-color: colors.$ultramarine-blue;
+    }
+}

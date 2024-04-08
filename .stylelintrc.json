@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-prettier-scss"
+    ],
+    "plugins": [
+        "stylelint-order",
+        "@stylistic/stylelint-plugin"
+    ],
+    "rules": {
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "blockless-after-blockless",
+                    "first-nested"
+                ],
+                "ignoreAtRules": [
+                    "else"
+                ]
+            }
+        ],
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested"
+                ]
+            }
+        ],
+        "@stylistic/no-missing-end-of-source-newline": true,
+        "@stylistic/max-empty-lines": 1,
+        "no-irregular-whitespace": true,
+        "order/order": [
+            "custom-properties",
+            "dollar-variables",
+            "declarations",
+            "rules"
+        ],
+        "order/properties-alphabetical-order": true
+    }
+}

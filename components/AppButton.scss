@@ -1,0 +1,25 @@
+@use './../assets/styles/typography';
+@use './../assets/styles/mixins';
+
+.button {
+  align-content: center;
+  align-items: center;
+  backdrop-filter: blur(38px);
+  background: rgb(255 255 255 / 4%);
+  border-radius: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: ALSHauss, sans-serif;
+  font-weight: 500;
+  gap: 0.8rem;
+  padding: 0.6rem 0.8rem;
+
+  @include mixins.font(typography.$font-body);
+
+  &:link {
+    background: #f5f8ff;
+    border: none;
+    color: inherit;
+    padding: 0.6rem 1.2rem 0.6rem 0.8rem;
+  }
+}

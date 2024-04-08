@@ -1,0 +1,25 @@
+@use 'sass:list';
+@use 'breakpoints';
+
+@mixin font($font-typography) {
+    font-size: list.nth($font-typography, 1);
+    line-height: list.nth($font-typography, 2);
+}
+
+@mixin media($from: none, $to: none, $unit: 'width') {
+    $settings-from: map.get(breakpoints.$breakpoints, $from);
+    $settings-to: map.get(breakpoints.$breakpoints, $to);
+
+    @if not $settings-to {
+        $settings-to: map.get(breakpoints.$breakpoints, list.nth($settings-from, 2));
+    }
+
+    @if $settings-from and $settings-to {
+        $from-px: list.nth($settings-from, 1);
+        $to-px: list.nth($settings-to, 1);
+
+        @media ($from-px<= $unit< $to-px) {
+        @content;
+        }
+    }
+}
